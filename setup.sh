@@ -11,4 +11,4 @@ DROPLET_IP=$1
 scp install.sh root@${DROPLET_IP}:
 
 # Exec the script
-ssh -i ~/.ssh/id_rsa_droplet_trading_bot root@${DROPLET_IP} bash /root/install.sh
+ssh root@${DROPLET_IP} bash /root/install.sh
