@@ -13,6 +13,7 @@ node -v
 git clone https://github.com/algo-trading-bots/express-app
 cd express-app
 npm install
+npm install -g pm2
 
 # Start the app
 npm run start
