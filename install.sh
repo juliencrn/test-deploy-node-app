@@ -10,7 +10,7 @@ sudo apt-get update && sudo apt-get install -y nodejs git
 node -v
 
 # Install the project
-git clone https://github.com/juliencrn/express-app
+git clone https://github.com/algo-trading-bots/express-app
 cd express-app
 npm install
 
