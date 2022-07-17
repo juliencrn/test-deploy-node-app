@@ -1,11 +1,25 @@
-const express = require('express')
-const app = express()
-const port = 3000
+let counter = 0;
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// Fake trading bot
+function tickBot() {
+    try {
+        counter += 1
+        console.log({ counter });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+        // Caught in a try/catch, the error is printed to the pm2 logs
+        // and the process continues
+        if (counter === 5) {
+            throw new Error("counter is 5")
+        }
+
+        // Stop the app (using the `--no-autorestart` flag)
+        if (counter === 10) {
+            process.exit(1)
+        }
+
+    } catch (error) {
+        console.error("got an error", error)
+    }
+}
+
+setInterval(tickBot, 1000)
