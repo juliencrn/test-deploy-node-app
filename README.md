@@ -41,3 +41,9 @@ pm2 monit
 pm2 stop bot
 pm2 delete bot
 ```
+
+## Alert
+
+Alert could be sent using a telegram bot. It was created using [BotFather](https://t.me/BotFather).
+
+It requires a `TELEGRAM_BOT_TOKEN` (via BotFather) and a `TELEGRAM_BOT_CHAT_ID` (from https://api.telegram.org/bo{token}/getUpdates['results'][0]['chat']['id']).
